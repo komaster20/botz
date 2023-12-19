@@ -1,0 +1,83 @@
+.backdrop {
+    animation: fadeinback 0.2s;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 40%;
+    z-index: 2;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes fadeinback {
+    from { opacity: 0; }
+    to   { opacity: 40%; }
+}
+
+@keyframes fadeinmodal {
+    from { opacity: 0.8; }
+    to   { opacity: 1; }
+}
+
+.modal_wrap_backdrop {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.modal_wrap {
+    position: absolute;
+    min-height: 300px;
+    min-width: 300px;
+    max-height: 800px;
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.modal_border {
+    margin-top: 110px;
+    animation: fadein 0.2s;
+    /* padding-top: 1px; */
+    max-height: 628px;
+    height: 260px;
+    width: 100%;
+    z-index: 2;
+}
+
+.modal_border_no_margin {
+    animation: fadein 0.2s;
+    /* padding-top: 1px; */
+    height: 260px;
+    width: 100%;
+    z-index: 2;
+}
+
+.title {
+    display: grid;
+    grid-template-columns: auto 20px 40px;
+}
+
+.close_wrap {
+    grid-column: 2;
+    cursor: pointer;
+}
+
+.close {
+    position: absolute;
+}
+
+.close:hover {
+    opacity: 0;
+}
